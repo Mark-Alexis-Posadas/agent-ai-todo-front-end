@@ -20,7 +20,10 @@ export const createTodo = async (todoData: Record<string, unknown>) => {
   return data;
 };
 
-export const updateTodo = async (id: number, todoData: Record<string, unknown>) => {
+export const updateTodo = async (
+  id: number,
+  todoData: Record<string, unknown>,
+) => {
   const { data } = await api.put(`/todos/${id}`, todoData);
   return data;
 };
